@@ -5,9 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>锦华的奇妙前端冒险</title>
+     <style>
+        p {
+            color: black;
+        }
+     </style>
 </head>
 
 <body>
+<div style="color: aqua;font-size: 70px;">
+    假如你舍一滴泪<br>
+    假如老去我能陪
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <h1>what can I say</h1>
     <br>
     <hr>
@@ -63,23 +87,58 @@
         <tbody>
         <tr>
             <td><!-- td加入的内容，从左到右 -->4</td>
-            <td>5</td>
+            <td rowspan="2">5</td><!-- rowspan竖向合并 -->
+            <td>6</td>
+        </tr>
+            <td>4</td>
+            <!-- <td>5</td> -->
             <td>6</td>
         </tr>
             <td>4</td>
             <td>5</td>
             <td>6</td>
-        </tr>        </tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
         </tr>
+       
         </tbody><!-- thead tbody tfoot感觉没啥卵用。。好像能使表格结构更好？ -->
+         <tr>
+            <td colspan="3">反是不思 亦已焉哉</td>
+        </tr>
     </table>
+    <h2><del>接下来是表单</del> </h2>
+    <form action=""><!-- form指定表单区域，使按钮功能正常 --> <!-- action发送的地址 -->
+    这是文本框：<input type="text" placeholder="请输入你的名字（提示词）"><br>
+    这是密码框：<input type="password" name="" id="" placeholder="请输入你的身份证，我要犯罪"><br>
+    
+    <button type="submit">如你所见这是一个没有用的按钮</button>
+    <button type="reset">这是一个重置按钮</button><br></form>
+    <button type="button">这是一个普通按钮</button><br></form><!--可以配合js添加其特殊功能  -->
+
+
+    这是单选框，选择你的物种：<input type="radio" name="dg" id="dog1" checked><label for="dog1">狗</label><!-- 加入checkd可以预选 -->
+    <input type="radio" name="dg" id="dog2"><label for="dog2">非狗</label><br>
+    
+    这是多选框：<input type="checkbox" name="" id="shi1" checked><label for="shi1">窜稀是答辩的自由 便秘是大肠的挽留</label><br>
+   
+    <input type="checkbox" name="" id="shi2" checked><label for="shi2">说拉屎太粗鲁 说蹲坑太庸俗 倒不如说在苍白的等待中遗落了一部分自己</label> <br>
+    <input type="checkbox" name="" id="niao1" checked><label for="niao1">那晚我尿的很高 以为能挡住脸上的泪</label><br>
+   
+    这是上传文件：<input type="file" multiple><!-- multiple文件多选 -->
+   
+    <h4>是下拉菜单</h4><br>
+   <div> 喜欢啥呢：</div><!-- div独占一行（布局标签） -->
+    <select name="喜欢的事情" id="">
+        <option value="">玩游戏</option>
+        <option value="">旅游</option>
+        <option value="">吃饭</option>
+        <option value="">喝咖啡</option>
+        <option value="" selected>喝茶</option>
+        <option value="">骑车</option>
+    </select><br>
+   
+    是文本域：<br>
+    <textarea name="" id="">请输入看了该网页的感想并复制qq发我</textarea><br>
+    
     
 </body>
-
 </html><strong>白龙赛高</strong>
 <hr>
-
-
