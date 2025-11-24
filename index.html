@@ -6,18 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>锦华的奇妙前端冒险</title>
      <style>
-        p {
-            color: black;
+        /* 定义id选择器（经常配合js使用） */
+        #define-id{
+            /* 是的这是内容 */
+        }
+        /* 通配选择器 */
+        *{
+           /* color: red; */
+        }
+        .aqua {
+             color: aqua; 
+        }
+        .size-70{
+            font-size: 70px;
+        }
+        .hongshikuai{
+            width: 100px;
+            height: 100px;
+            background-color:red;
+        }
+        div{
+            font-family: 楷体;
+            font-size: 40px;
+            font-weight: 900;/* line-height: x;  控制行高为数字高*x */
+            height: 200px;
+            background-color: rgb(106, 139, 106);
+            line-height: 200px;
         }
      </style>
 </head>
 
 <body>
-<div style="color: aqua;font-size: 70px;">
+<p style="color: aqua;font-size: 70px; font-family: 楷体;">
     假如你舍一滴泪<br>
     假如老去我能陪
-</div>
-
+</p>
+<p class="aqua size-70" style="font-family: 楷体;" >
+    是你吻开笔墨<br>
+    染我眼角珠泪
+</p>
+<p class="hongshikuai">这是红石块</p>
+<div>烟波里成灰，也去得完美</div>
 
 
 
@@ -125,7 +154,7 @@
     这是上传文件：<input type="file" multiple><!-- multiple文件多选 -->
    
     <h4>是下拉菜单</h4><br>
-   <div> 喜欢啥呢：</div><!-- div独占一行（布局标签） -->
+   <p> 喜欢啥呢：</p><!-- div独占一行（布局标签） -->
     <select name="喜欢的事情" id="">
         <option value="">玩游戏</option>
         <option value="">旅游</option>
