@@ -13,6 +13,7 @@
         /* 通配选择器 */
         *{
            /* color: red; */
+          /*  text-align: center; */
         }
         .aqua {
              color: aqua; 
@@ -30,24 +31,39 @@
             font-size: 40px;
             font-weight: 900;/* line-height: x;  控制行高为数字高*x */
             height: 200px;
-            background-color: rgb(106, 139, 106);
+            background-color: rgba(106, 139, 106,0.5);
             line-height: 200px;
+            
         }
+        /* 首行缩进text-inden */
+        /* p{text-indent: 2em;} */
+        
+        /* 用font简写，将多行font属性合并为一条代码 */
+        /* 格式为：font： 是否倾斜 是否加粗 字号/行高 字体 */
+        #becenter{
+            text-align: center;/* 内容居中 */
+        }
+         #removeunderlined{
+            text-decoration: none;/* 去掉下划线 */  /* line-through添加删除线  overline添加项顶线 */
+         }    
+         a{
+            text-decoration: none;
+         }      
+            
      </style>
 </head>
 
 <body>
-<p style="color: aqua;font-size: 70px; font-family: 楷体;">
+<p style="color: aqua;font-size: 70px; font-family: 楷体; text-indent: 2em;" id="becenter">
     假如你舍一滴泪<br>
     假如老去我能陪
 </p>
-<p class="aqua size-70" style="font-family: 楷体;" >
+<p class="aqua size-70" style="font-family: 楷体; text-indent: 2em;" id="becenter" >
     是你吻开笔墨<br>
     染我眼角珠泪
 </p>
 <p class="hongshikuai">这是红石块</p>
-<div>烟波里成灰，也去得完美</div>
-
+<div id="becenter">烟波里成灰，也去得完美</div>
 
 
 
@@ -69,14 +85,14 @@
     <p>你亦可呼吾小名“佐助”</p>
     <audio src="./潮鸣.mp3" controls loop autoplay></audio>
     <h2>二级标题，<strong>加粗的锦华</strong><br></h2>
-    <img src="./自拍1.jpg" alt="佐助的自拍" title="冷知识：这个男人是佐助" width="300">
+    <img src="./自拍1.jpg" alt="佐助的自拍" title="冷知识：这个男人是佐助" width="300"">
     <h3>听说鼠标放在图片上会有个人简介</h3>
     <br>
     <a href="https://www.bilibili.com/video/BV1uT4y1P7CX/?spm_id_from=333.788.recommend_more_video.16&trackid=web_related_0.router-related-2206146-n6d7k.1763310150630.498"
-        target="_blank"><strong> 点击帅气+1</strong></a>
+        target="_blank"><strong id="removeunderlined"> 点击帅气+1</strong></a>
     <br>
     <a href="https://www.bilibili.com/video/BV1V142117mc?spm_id_from=333.788.recommend_more_video.0&trackid=web_related_0.router-related-2206146-5nk2d.1763962126412.345&vd_source=e9543b2a9899e60b70c783678fe19ea7"
-        target="_blank">
+        target="_blank" >
         <img src="./握拳自拍.jpg" alt="" width="400">
     </a>
     <h5>点一次图片吧，你将看到我的帅剪</h5>
