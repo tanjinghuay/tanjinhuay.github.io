@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>锦华的奇妙前端冒险</title>
      <style>
+        body {
+      margin: 0; /* 清除body默认边距 */
+      height: 90vh; /* 让body占满视口高度 */
+      background-image: url("低头.jpg");
+      background-repeat: no-repeat;
+      background-size: cover; /* 全屏覆盖 */
+      background-position: center;
+    }
         /* 定义id选择器（经常配合js使用） */
         #define-id{
             /* 是的这是内容 */
@@ -14,7 +22,25 @@
         *{
            /* color: red; */
           /*  text-align: center; */
+        }  
+        strong{
+            color: aqua;
         }
+        /* 选择器优先级  局部优先 标签选中范围越大，优先级越低
+             通配符<标签<类<id<行内样式< !important
+             !important加在选择器里面，表示最高优先级
+        */
+        /* 伪类选择器 用于鼠标悬停时的样式 格式加：hover  即可 */
+        strong:hover{
+            color: red;
+        }
+        /* 并集选择器 用，分隔标签  使多个标签有相同功效 */
+        /* 交集选择器 class选择器前加标签名 */
+        /* 后代选择器,选中所有后代(父子标签之间有>只指定“儿子”) */
+        div p{
+            color: red;
+        }
+
         .aqua {
              color: aqua; 
         }
@@ -54,6 +80,7 @@
 </head>
 
 <body>
+    
 <p style="color: aqua;font-size: 70px; font-family: 楷体; text-indent: 2em;" id="becenter">
     假如你舍一滴泪<br>
     假如老去我能陪
