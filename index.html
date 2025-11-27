@@ -11,8 +11,8 @@
       height: 90vh; /* 让body占满视口高度 */
       background-image: url("低头.jpg");
       background-repeat: repeat-y;
-      background-size: cover; /* 全屏覆盖 */
-      background-position: center;
+      background-size: cover; /* 全屏覆盖（可能导致图片显示不全）   用contain：等比例缩放图，可能导致露白 */  
+      background-position: center;/* 可用x y  结构，从左上开始的坐标计数 */
     }
         /* 定义id选择器（经常配合js使用） */
         #define-id{
@@ -75,12 +75,43 @@
          a{
             text-decoration: none;
          }      
-            
+        .fixed-right-top {
+      position: fixed; /* 核心：固定定位 */
+      top: 20px;
+      right: 20px; 
+      z-index: 999; 
+      width: 100px; 
+      height: auto; 
+    }  
+    .fixed-left-top {
+      position: fixed; 
+      top: 20px;
+      left: 20px; 
+      z-index: 999; 
+      width: 100px; 
+      height: auto; 
+    }  .fixed-bottom-right {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;   
+  z-index: 999;
+  width: 100px;
+  height: auto;
+}
+    .fixed-bottom-left {
+  position: fixed;
+  bottom: 20px;   
+  left: 20px;    
+  z-index: 999;
+  width: 100px;
+  height: auto;
+}
      </style>
 </head>
 
 <body>
-    
+   <img src="中指嘲讽.jpg" alt="" class="fixed-right-top"> 
+   <img src="中指嘲讽.jpg" alt="" class="fixed-left-top"><img src="中指嘲讽.jpg" alt="" class="fixed-bottom-left"><img src="中指嘲讽.jpg" alt="" class="fixed-bottom-right">
 <p style="color: aqua;font-size: 70px; font-family: 楷体; text-indent: 2em;" id="becenter">
     假如你舍一滴泪<br>
     假如老去我能陪
@@ -90,7 +121,7 @@
     染我眼角珠泪
 </p>
 <p class="hongshikuai">这是红石块</p>
-<div id="becenter">烟波里成灰，也去得完美</div>
+<div id="becenter"><a href="start.html" target="_blank">烟波里成灰，也去得完美</a></div>
 
 
 
@@ -214,4 +245,3 @@
 </body>
 </html><strong>白龙赛高</strong>
 <hr>
-
