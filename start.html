@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>锦华的奇妙前端冒险</title>
+     <style>
+        li:nth-child(){
+            background-color: rgb(233, 230, 82);/* 结构伪类选择器，快速选择并列标签的子 */
+        }
+        /* 伪元素选择器：创建假元素，装饰内容（不会就去搜） */
+        body {
+      margin: 0; /* 清除body默认边距 */
+      height: 90vh; /* 让body占满视口高度 */
+      background-image: url("低头.jpg");
+      background-repeat: repeat-y;
+      background-size: cover; /* 全屏覆盖（可能导致图片显示不全）   用contain：等比例缩放图，可能导致露白 */  
+      background-position: center;/* 可用x y  结构，从左上开始的坐标计数 */
+    }
+        /* 定义id选择器（经常配合js使用） */
+        #define-id{
+            /* 是的这是内容 */
+        }
+        /* 通配选择器 */
+        *{
+           /* color: red; */
+          /*  text-align: center; */
+        }  
+        strong{
+            color: aqua;
+        }
+        /* 选择器优先级  局部优先 标签选中范围越大，优先级越低
+             通配符<标签<类<id<行内样式< !important
+             !important加在选择器里面，表示最高优先级
+        */
+        /* 伪类选择器 用于鼠标悬停时的样式 格式加：hover  即可 */
+        strong:hover{
+            color: red;
+        }
+        /* 并集选择器 用，分隔标签  使多个标签有相同功效 */
+        /* 交集选择器 class选择器前加标签名 */
+        /* 后代选择器,选中所有后代(父子标签之间有>只指定“儿子”) */
+        div p{
+            color: red;
+        }
+
+        .aqua {
+             color: aqua; 
+        }
+        .size-70{
+            font-size: 70px;
+        }
+        .hongshikuai{
+            width: 100px;
+            height: 100px;
+            background-color:red;
+        }
+        div{
+            font-family: 楷体;
+            font-size: 40px;
+            font-weight: 900;/* line-height: x;  控制行高为数字高*x */
+            height: 200px;
+            background-color: rgba(106, 139, 106,0.5);
+            line-height: 200px;
+            
+        }
+        /* 显示模式：block 块级；inline-block 行内块；inline 行内 */
+        /* 首行缩进text-inden */
+        /* p{text-indent: 2em;} */
+        
+        /* 用font简写，将多行font属性合并为一条代码 */
+        /* 格式为：font： 是否倾斜 是否加粗 字号/行高 字体 */
+        #becenter{
+            text-align: center;/* 内容居中 */
+        }
+         #removeunderlined{
+            text-decoration: none;/* 去掉下划线 */  /* line-through添加删除线  overline添加项顶线 */
+         }    
+         a{
+            text-decoration: none;
+         }      
+        .fixed-right-top {
+      position: fixed; /* 核心：固定定位 */
+      top: 20px;
+      right: 20px; 
+      z-index: 999; 
+      width: 100px; 
+      height: auto; 
+    }
+     .fixed-bottom-right {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;   
+  z-index: 999;
+  width: 100px;
+  height: auto;
+}
+     </style>
+</head>
+
+<body>
+   <img src="中指嘲讽.jpg" alt="" class="fixed-right-top"> 
+   <img src="中指嘲讽.jpg" alt="" class="fixed-bottom-right">
+<p style="color: aqua;font-size: 70px; font-family: 楷体; text-indent: 2em;" id="becenter">
+    假如你舍一滴泪<br>
+    假如老去我能陪
+</p>
+<p class="aqua size-70" style="font-family: 楷体; text-indent: 2em;" id="becenter" >
+    是你吻开笔墨<br>
+    染我眼角珠泪
+</p>
+<p class="hongshikuai">这是红石块</p>
+<div id="becenter">烟波里成灰，也去得完美</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <h1>what can I say</h1>
+    <br>
+    <hr>
+    <h2>噢噢，我先来个自我介绍吧</h2>
+    <p>众所周知，我是jump第一帅--锦华</p>
+    <p>你亦可呼吾小名“佐助”</p>
+    <audio src="./潮鸣.mp3" controls loop autoplay></audio>
+    <h2>二级标题，<strong>加粗的锦华</strong><br></h2>
+    <img src="./自拍1.jpg" alt="佐助的自拍" title="冷知识：这个男人是佐助" width="300"">
+    <h3>听说鼠标放在图片上会有个人简介</h3>
+    <br>
+    <a href="https://www.bilibili.com/video/BV1uT4y1P7CX/?spm_id_from=333.788.recommend_more_video.16&trackid=web_related_0.router-related-2206146-n6d7k.1763310150630.498"
+        target="_blank"><strong id="removeunderlined"> 点击帅气+1</strong></a>
+    <br>
+    <a href="https://www.bilibili.com/video/BV1V142117mc?spm_id_from=333.788.recommend_more_video.0&trackid=web_related_0.router-related-2206146-5nk2d.1763962126412.345&vd_source=e9543b2a9899e60b70c783678fe19ea7"
+        target="_blank" >
+        <img src="./握拳自拍.jpg" alt="" width="400">
+    </a>
+    <h5>点一次图片吧，你将看到我的帅剪</h5>
+    <h2><em>倾斜的锦华</em><br></h2>
+    <h2><ins>下划线的锦华</ins><br></h2>
+    <h2><del>删除线的锦华</del></h2>
+    <!--     <video src="" controls loop muted autoplay></video>
+ -->
+    <p>无序列表</p>
+    <ul>
+        <li> 一:玩白龙遇到玛丽斯可以直接投</li>
+        <li>二：火影手游遇到须佐卡可以放下手机</li>
+        <li>三:别点开steam</li>
+    </ul>
+    <p>有序列表</p>
+    <ol>
+        <li><a href="https://global.kfc.com/" target="_blank">补药吃肯基基</a></li>
+        <li><a href="https://www.mcdonalds.com.cn/page/offical-channels/" target="_blank">补药吃麦当当</a></li>
+        <li><a href="https://www.cnhls.com/" target="_blank">补药吃华来屎</a></li>
+    </ol>
+    <p>定义列表</p>
+    <dl>
+        <dt>总标</dt>
+        <dd>竖向延伸</dd>
+        <dd>竖</dd>
+        <dd>竖</dd><!-- 横向内容写在dd中 -->
+    </dl>
+    <h2>接下来是表格</h2>
+    <table border="2"><!-- border可以在表格加上间隔线 -->
+        <thead>
+            <tr><!--放表格总结的属性-->
+                <th>一</th>
+                <th>二</th>
+                <th>三</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><!-- td加入的内容，从左到右 -->4</td>
+            <td rowspan="2">5</td><!-- rowspan竖向合并 -->
+            <td>6</td>
+        </tr>
+            <td>4</td>
+            <!-- <td>5</td> -->
+            <td>6</td>
+        </tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+       
+        </tbody><!-- thead tbody tfoot感觉没啥卵用。。好像能使表格结构更好？ -->
+         <tr>
+            <td colspan="3">反是不思 亦已焉哉</td>
+        </tr>
+    </table>
+    <h2><del>接下来是表单</del> </h2>
+    <form action=""><!-- form指定表单区域，使按钮功能正常 --> <!-- action发送的地址 -->
+    这是文本框：<input type="text" placeholder="请输入你的名字（提示词）"><br>
+    这是密码框：<input type="password" name="" id="" placeholder="请输入你的身份证，我要犯罪"><br>
+    
+    <button type="submit">如你所见这是一个没有用的按钮</button>
+    <button type="reset">这是一个重置按钮</button><br></form>
+    <button type="button">这是一个普通按钮</button><br></form><!--可以配合js添加其特殊功能  -->
+
+
+    这是单选框，选择你的物种：<input type="radio" name="dg" id="dog1" checked><label for="dog1">狗</label><!-- 加入checkd可以预选 -->
+    <input type="radio" name="dg" id="dog2"><label for="dog2">非狗</label><br>
+    
+    这是多选框：<input type="checkbox" name="" id="shi1" checked><label for="shi1">窜稀是答辩的自由 便秘是大肠的挽留</label><br>
+   
+    <input type="checkbox" name="" id="shi2" checked><label for="shi2">说拉屎太粗鲁 说蹲坑太庸俗 倒不如说在苍白的等待中遗落了一部分自己</label> <br>
+    <input type="checkbox" name="" id="niao1" checked><label for="niao1">那晚我尿的很高 以为能挡住脸上的泪</label><br>
+   
+    这是上传文件：<input type="file" multiple><!-- multiple文件多选 -->
+   
+    <h4>是下拉菜单</h4><br>
+   <p> 喜欢啥呢：</p><!-- div独占一行（布局标签） -->
+    <select name="喜欢的事情" id="">
+        <option value="">玩游戏</option>
+        <option value="">旅游</option>
+        <option value="">吃饭</option>
+        <option value="">喝咖啡</option>
+        <option value="" selected>喝茶</option>
+        <option value="">骑车</option>
+    </select><br>
+   
+    是文本域：<br>
+    <textarea name="" id="">请输入看了该网页的感想并复制qq发我</textarea><br>
+    
+    
+</body>
+</html><strong>白龙赛高</strong>
+<hr>

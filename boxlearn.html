@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是一个盒子</title>
+    <style>
+        div{text-align: center;
+            /* 盒子内容区域-width&height
+            内边距-padding
+            边框线-border
+            外边距-margin */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            padding: 20px; /* padding多值写法：四值:顺时针写属性;三值：上 左右 下 ；两值：上下 左右*/
+            border: 2px solid black;/* solid-实线；dashed-虚线；dotted-点线（还可以border-方位名词改变不同方向边框线属性[padding用法一样]） */
+            border-bottom: 2px dashed red;
+            margin: 50px;/* 差不多是盒子间距；多值写法和padding一样 */
+
+            overflow: hidden;/* hidden-溢出隐藏；scroll-显示滚动条；auto-溢出才显示滚动条        */
+
+            border-radius: 20px;
+            /* 内减模式，不需要手动减法，加padding和border不会撑大盒子 */
+            box-sizing: border-box;
+
+            /* 盒子阴影：名：box-shadow
+            属性值：x轴偏移量 y轴偏移量 模糊半径 扩散半径 颜色 内外阴影 */
+        }
+        .yuan{
+            border-radius: 50%;
+        }
+        .shadow1{
+            box-shadow: 20px 22px 18px rgb(0,0,0,0.3);
+        } .shadow2{
+            box-shadow: 20px 22px 18px rgb(0,0,0,0.3) inset;
+        }
+    </style>
+</head>
+<body>
+    <div>a box</div>
+    <div class="shadow2">第二个盒子</div>
+    <div class="yuan shadow1">原神qd</div>
+    <a href="news.html">新闻页</a>
+    
+</body>
+</html>

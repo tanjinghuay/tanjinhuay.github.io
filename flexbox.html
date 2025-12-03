@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex弹性容器</title>
+    <style>
+        .box{
+            display: flex;
+
+            align-items: stretch;/* 侧轴拉伸 */
+            align-items: center;
+            height: 300px;
+            border: 1px solid  grey;
+            justify-content: center; /* 居中 */ /* space-around：空白均匀分布于盒子两侧 */
+            /* justify-content: space-between; */ /* 弹性盒间距相等 */  /* space-evenly：盒子与容器间距相等 */
+            justify-content: space-around;
+        }
+        .box div{
+            width: 200px;
+            height: 250px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>
